@@ -15,9 +15,12 @@
 
 <body>
     <div class="header">
-        <img class="logo" src="img/logo.png" alt="logo: logo">
-        <div class="element"></div>
+        <a href="index.html">
+            <img class="logo" src="img/logo.svg" alt="logo: logo">
+        </a>
+        <hr>
         <div class="title">Реструктуризація заборгованості</div>
+
     </div> <!-- /.header -->
 
     <div class="search">
@@ -28,10 +31,9 @@
                     <label class="search-form__label" for="search">ID клієнта</label>
                     <input class="search-form__input" action="" id="" name="search" placeholder="Id клієнта"
                         autocomplete="off" required="">
-                    <button class="search-form__button"><span>Знайти</span></button>
+                    <button class="search-form__button btn"><span>Знайти</span></button>
                 </form>
             </div> <!-- /.search-form -->
-
             <div class="result hidden">
                 <div class="container">
                     <h2 class="result-title">Результат пошуку</h2>
@@ -54,11 +56,14 @@
 
     <div class="detail hidden">
         <div class="container">
-            <div class="back-result">Повернутись назад</div>
+            <div class="back-result__block">
+                <img src="./img/arr.svg">
+                <div class="back-result">Повернутись назад</div>
+            </div>
             <div class="detail-contract">
                 <h2 class="detail-contract__title">Деталі угоди</h2>
                 <ul class="detail-list">
-                    
+
                 </ul>
             </div>
         </div>
@@ -70,7 +75,7 @@
                 <h3 class="sheme-title">Доступні наступні схеми</h3>
                 <form class="detail-form" action="">
                     <div>
-                        
+
                     </div>
                     <button class="detail-form_btn btn">Сформувати протокол</button>
                 </form>
@@ -84,12 +89,14 @@
             <div class="finish-list">
                 <h2 class="finish-title">Заявку відпрацьовано</h2>
                 <div class="finish-result">Протокол успішно сформовано</div>
-    
+
             </div>
             <button class="finish-btn btn">Закінчити опрацювання</button>
         </div>
     </div>
     <!-- /.finish -->
+
+    <div class="error__block container"></div>
 
 
     <script src="js/main.js" type="module"></script>
