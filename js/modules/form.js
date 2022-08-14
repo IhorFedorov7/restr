@@ -42,7 +42,7 @@ export const Form = async (option) => {
     
             //Юра сюда ставишь это option.url + inp.value
             // console.log(option.url + inp.value);
-            Fetch(option.url, option.type, [option.blockEl, option.content]);
+            Fetch(option.url + inp.value, option.type, [option.blockEl, option.content]);
             
             inp.value = '';
             btn.setAttribute('disabled', false);
@@ -53,7 +53,7 @@ export const Form = async (option) => {
        
         //Юра сюда ставишь это option.url + btn.parentElement.previousElementSibling.innerText
         // console.log(option.url + btn.parentElement.previousElementSibling.innerText);
-        Fetch(option.url, option.type, [option.blockEl, option.content, btn.parentElement.previousElementSibling.previousElementSibling.innerText, btn.parentElement.parentElement.firstElementChild.innerText]);    
+        Fetch(option.url + btn.parentElement.previousElementSibling.innerText, option.type, [option.blockEl, option.content, btn.parentElement.previousElementSibling.previousElementSibling.innerText, btn.parentElement.parentElement.firstElementChild.innerText]);    
     }
  
     if ( btn.classList[0] === 'detail-form_btn' ) {
